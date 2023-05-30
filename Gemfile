@@ -12,7 +12,9 @@ gem 'dotenv'
 
 gem 'kaminari'
 
-gem "table-print"
+gem "table_print"
+
+gem "faker"
 
 gem 'rubocop-rails'
 
