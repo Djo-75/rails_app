@@ -10,3 +10,8 @@
 </div>
 <%= button_to "Log out", destroy_user_session_path, method: :delete%>
 <%= link_to "New user", new_user_path %>
+<% if user_signed_in? %>
+  <p>Je suis loggé!!!!</p>
+<% else %>
+  <p>Pas loggéééé</p>
+<% end %>
