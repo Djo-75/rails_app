@@ -15,4 +15,16 @@
     <strong>Password:</strong>
     <%= user.password %>
   </p>
+  <p>
+    <h3>Changer d'avatar ?</h3>
+    <%= form_tag user_avatars_path(user.id), multipart: true do %>
+      <%= file_field_tag :avatar %>
+      <%= submit_tag "mettre à jour" %>
+    <% end %>
+  </p>
+  <%if user.avatar.attached?%>
+    <%= image_tag user.avatar, alt: 'avatar', height: '50px', width: '50px', style: 'border-radius: 50%'  %>
+  <%else%>
+    <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+  <%end%>
 </div>
