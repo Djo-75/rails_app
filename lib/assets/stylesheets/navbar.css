@@ -10,18 +10,27 @@ body {
 
 .navbar {
   display: flex; /* 1 */
-  justify-content: space-between; /* 2 */
-  padding: 1rem 2rem; /* 3 */
   background: #cfd8dc; /* 4 */
+
+  width: 100%;
+  margin: 0 1em 1em 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
 }
 
 .navbar ul {
   display: flex; /* 5 */
   list-style: none; /* 6 */
+  padding-left: 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .navbar li {
-  padding-left: 1rem; /* 7! */
+  padding: 1rem 1rem 1rem 1rem; /* 7! */
+  text-align: center;
+  align-items: center;
 }
 
 .navbar a {

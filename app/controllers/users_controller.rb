@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+    redirect_to root_path, alert: "T'es pas autorisé à accéder à cette page"
   end
 
   # GET /users/1 or /users/1.json
@@ -73,7 +74,7 @@ class UsersController < ApplicationController
 
     def logged_in_user
       if current_user != User.find(params[:id])
-        redirect_to root_path
+        redirect_to root_path, alert: "T'es pas autorisé à accéder à cette page"
       end
     end
 end
