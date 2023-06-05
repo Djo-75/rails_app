@@ -2,10 +2,14 @@
   <p>
     <img src="<%= item.image_url %>" width="300" height="300">
   </p>
-  <%# <p> %>
-  <%# <strong>Auteur:</strong> %>
-  <%# <%= item.user%> %>
-  <%# </p> %>
+  <p>
+    <strong>Auteur:</strong>
+    <% if item.users.present? %>
+      <%= item.users.first.first_name %>
+    <% else %>
+      No author found
+    <% end %>
+  </p>
   <p>
     <strong>Price:</strong>
     <%= item.price %>

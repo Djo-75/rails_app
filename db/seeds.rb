@@ -19,6 +19,12 @@ end
 
 puts "users ok"
 
+User.create!(
+  first_name: "Jordan",
+  last_name: "Pecquet",
+  email: "j@j.com",
+  password: "jordan")
+
 
 10.times do
   Item.create!(
