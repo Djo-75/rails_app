@@ -1,22 +1,24 @@
-<div id="<%= dom_id item %>">
+<div id="<%= dom_id item %>" style="background-color: lightblue; padding: 10px; border: 1px solid gray;">
+  <p>
+    <img src="<%= item.image_url %>" width="300" height="300">
+  </p>
+  <%# <p> %>
+  <%# <strong>Auteur:</strong> %>
+  <%# <%= item.user%> %>
+  <%# </p> %>
   <p>
     <strong>Price:</strong>
     <%= item.price %>
   </p>
-
   <p>
     <strong>Name:</strong>
     <%= item.name %>
   </p>
-
   <p>
     <strong>Description:</strong>
     <%= item.description %>
   </p>
-
   <p>
-    <strong>Image url:</strong>
-    <%= item.image_url %>
+    <%= link_to "Show this item", item %>
   </p>
-
 </div>

@@ -1,0 +1,21 @@
+.items-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Add a gap of 10px between the elements */
+  text-align: center;
+}
+
+.items-display div {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  gap: 3px;
+  border: 0.5em;
+  border-color: blue;
+}
+
+#dom_id > {
+  background-color: lightblue;
+  padding: 5px;
+  border: 1px solid gray;
+}
